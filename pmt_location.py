@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 id = 0
 ends = ['+1', '-1', '+1', '-1']
-endnames = ['UP', 'DN', 'N', 'S']
+endnames = ['UP', 'DW', 'N', 'S']
 tab = '\t'
 for iend in range(0,4):
     end = ends[iend]

@@ -7,3 +7,5 @@ mysql -utofuser TOFComponent -e "load data infile '$working_dir/rachel.txt' into
 rm -f pmt_location.txt
 ./pmt_location.py > pmt_location.txt
 mysql -utofuser TOFComponent -e "load data infile '$working_dir/pmt_location.txt' into table TOFComponent.pmtLocation"
+awk '{print "UPDATE pmt SET pmtLocationId = (SELECT id FROM pmtLocation WHERE label=\""$3"\") WHERE serialNo = \""$2"\";"}' < rachel_label.txt | mysql -utofuser TOFComponent
+
