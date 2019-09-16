@@ -6,6 +6,5 @@ create table moduleLocation (
   end smallint default null,
   orientation enum('up', 'down') not null,
   label varchar(16) not null,
-  serialNo varchar(64) default null,
   primary key (id)
 );
