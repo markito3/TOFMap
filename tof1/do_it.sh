@@ -5,7 +5,7 @@ echo \ \ GRANT ALL on TOFMap.\* to \'tofuser\'@\'hostofchoice.domainofchoice\'\;
 echo \ \ GRANT FILE ON \*.\* TO \'tofuser\'@\'hostofchoice.domainofchoice\'\;
 mysql -utofuser -e 'drop database if exists TOFMap'
 mysql -utofuser -e 'create database TOFMap'
-cat ../sql/pmt.sql ../sql/pmt_location.sql ../sql/module_location.sql | mysql -utofuser TOFMap
+cat ../sql/pmt.sql ../sql/pmt_location.sql ../sql/module.sql ../sql/module_location.sql | mysql -utofuser TOFMap
 working_dir=`pwd`
 mysql -utofuser TOFMap -e "load data local infile '$working_dir/rachel.txt' into table TOFMap.pmt"
 rm -f pmt_location.txt

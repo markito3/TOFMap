@@ -1,4 +1,4 @@
-SELECT pmtLocation.id as ID, pmtLocation.label AS Cable_Label, serialNo as PMT_Serial_No, layer as Layer, position as Position, moduleType as Module_Type
+SELECT pmtLocation.id as ID, pmtLocation.label AS Cable_Label, serialNo as PMT_Serial_No, layer as Layer, position as Module_Position, moduleType as Module_Type
   FROM pmtLocation, pmt, moduleLocation
   WHERE pmt.pmtLocationId = pmtLocation.id
   AND moduleLocationId = moduleLocation.id ORDER BY pmtLocation.id;
