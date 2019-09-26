@@ -1,0 +1,96 @@
+1 X-01 +1 long_60 NULL down 4333-04-52
+2 X-02 +1 long_60 NULL up 4333-04-23
+3 X-03 +1 long_60 NULL down 4333-04-60
+4 X-04 +1 long_60 NULL up 4333-04-64
+5 X-05 +1 long_60 NULL down 4333-04-16
+6 X-06 +1 long_60 NULL up 4333-04-33
+7 X-07 +1 long_60 NULL down 4333-04-08
+8 X-08 +1 long_60 NULL up 4333-04-65
+9 X-09 +1 long_60 NULL down 4333-04-26
+10 X-10 +1 long_60 NULL up 4333-04-62
+11 X-11 +1 long_60 NULL down 4333-04-49
+12 X-12 +1 long_60 NULL up 4333-04-89
+13 X-13 +1 long_60 NULL down 4333-04-06
+14 X-14 +1 long_60 NULL up 4333-04-76
+15 X-15 +1 long_60 NULL down 4333-04-44
+16 X-16 +1 long_60 NULL up 4333-04-03
+17 X-17 +1 long_60 NULL down 4333-04-04
+18 X-IN-1 +1 long_45_sym NULL up
+19 X-IN-2 +1 long_45_asym NULL down
+20 X-IN-3 +1 long_30 NULL up
+21 X-IN-4 +1 long_30 NULL down
+22 X-IN-5L +1 short_45_L -1 up
+23 X-IN-6L +1 short_45_sym -1 down
+24 X-IN-7L +1 short_45_sym -1 up
+25 X-IN-8L +1 short_45_L -1 down
+26 X-IN-5R +1 short_45_R +1 up
+27 X-IN-6R +1 short_45_sym +1 down
+28 X-IN-7R +1 short_45_sym +1 up
+29 X-IN-8R +1 short_45_R +1 down
+30 X-IN-9 +1 long_30 NULL up
+31 X-IN-10 +1 long_30 NULL down
+32 X-IN-11 +1 long_45_asym NULL up
+33 X-IN-12 +1 long_45_sym NULL down
+34 X-30 +1 long_60 NULL up
+35 X-31 +1 long_60 NULL down
+36 X-32 +1 long_60 NULL up
+37 X-33 +1 long_60 NULL down
+38 X-34 +1 long_60 NULL up
+39 X-35 +1 long_60 NULL down
+40 X-36 +1 long_60 NULL up
+41 X-37 +1 long_60 NULL down
+42 X-38 +1 long_60 NULL up
+43 X-39 +1 long_60 NULL down
+44 X-40 +1 long_60 NULL up
+45 X-41 +1 long_60 NULL down
+46 X-42 +1 long_60 NULL up
+47 X-43 +1 long_60 NULL down
+48 X-44 +1 long_60 NULL up
+49 Y-01 -1 long_60 NULL down
+50 Y-02 -1 long_60 NULL up
+51 Y-03 -1 long_60 NULL down
+52 Y-04 -1 long_60 NULL up
+53 Y-05 -1 long_60 NULL down
+54 Y-06 -1 long_60 NULL up
+55 Y-07 -1 long_60 NULL down
+56 Y-08 -1 long_60 NULL up
+57 Y-09 -1 long_60 NULL down
+58 Y-10 -1 long_60 NULL up
+59 Y-11 -1 long_60 NULL down
+60 Y-12 -1 long_60 NULL up
+61 Y-13 -1 long_60 NULL down
+62 Y-14 -1 long_60 NULL up
+63 Y-15 -1 long_60 NULL down
+64 Y-16 -1 long_60 NULL up
+65 Y-17 -1 long_60 NULL down
+66 Y-IN-1 -1 long_45_sym NULL up
+67 Y-IN-2 -1 long_45_asym NULL down
+68 Y-IN-3 -1 long_30 NULL up
+69 Y-IN-4 -1 long_30 NULL down
+70 Y-IN-5L -1 short_45_L -1 up
+71 Y-IN-6L -1 short_45_sym -1 down
+72 Y-IN-7L -1 short_45_sym -1 up
+73 Y-IN-8L -1 short_45_L -1 down
+74 Y-IN-5R -1 short_45_R +1 up
+75 Y-IN-6R -1 short_45_sym +1 down
+76 Y-IN-7R -1 short_45_sym +1 up
+77 Y-IN-8R -1 short_45_R +1 down
+78 Y-IN-9 -1 long_30 NULL up
+79 Y-IN-10 -1 long_30 NULL down
+80 Y-IN-11 -1 long_45_asym NULL up
+81 Y-IN-12 -1 long_45_sym NULL down
+82 Y-30 -1 long_60 NULL up
+83 Y-31 -1 long_60 NULL down
+84 Y-32 -1 long_60 NULL up
+85 Y-33 -1 long_60 NULL down
+86 Y-34 -1 long_60 NULL up
+87 Y-35 -1 long_60 NULL down
+88 Y-36 -1 long_60 NULL up
+89 Y-37 -1 long_60 NULL down
+90 Y-38 -1 long_60 NULL up
+91 Y-39 -1 long_60 NULL down
+92 Y-40 -1 long_60 NULL up
+93 Y-41 -1 long_60 NULL down
+94 Y-42 -1 long_60 NULL up
+95 Y-43 -1 long_60 NULL down
+96 Y-44 -1 long_60 NULL up
