@@ -12,5 +12,5 @@ rm -f pmt_location.txt
 ./pmt_location.py > pmt_location.txt
 mysql -utofuser TOFMap -e "load data local infile '$working_dir/pmt_location.txt' into table TOFMap.pmtLocation"
 awk '{print "UPDATE pmt SET pmtLocationId = (SELECT id FROM pmtLocation WHERE label=\""$3"\") WHERE serialNo = \""$2"\";"}' < rachel_label.txt | mysql -utofuser TOFMap
-awk '{print "INSERT INTO moduleLocation set", "id="$1",", "label=\""$2"\",", "layer="$3",", "position="$4",", "moduleType=\""$5"\",", "end="$6",", "orientation=\""$7"\";"}' < module_location.txt | mysql -utofuser TOFMap
+awk '{print "INSERT INTO moduleLocation set", "id="$1",", "label=\""$2"\",", "layer="$3",", "moduleType=\""$4"\",", "end="$5",", "orientation=\""$6"\";"}' < module_location.txt | mysql -utofuser TOFMap
 ./mod_pmt_locations.py | awk '{print "UPDATE pmtLocation set moduleLocationId = (SELECT id from moduleLocation where label = \""$2"\") where label = \""$1"\";"}' | mysql -utofuser TOFMap

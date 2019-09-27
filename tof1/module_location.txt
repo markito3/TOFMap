@@ -1,92 +1,92 @@
-1 X-1 +1 1 standard NULL down
-2 X-2 +1 2 standard NULL up
-3 X-3 +1 3 standard NULL down
-4 X-4 +1 4 standard NULL up
-5 X-5 +1 5 standard NULL down
-6 X-6 +1 6 standard NULL up
-7 X-7 +1 7 standard NULL down
-8 X-8 +1 8 standard NULL up
-9 X-9 +1 9 standard NULL down
-10 X-10 +1 10 standard NULL up
-11 X-11 +1 11 standard NULL down
-12 X-12 +1 12 standard NULL up
-13 X-13 +1 13 standard NULL down
-14 X-14 +1 14 standard NULL up
-15 X-15 +1 15 standard NULL down
-16 X-16 +1 16 standard NULL up
-17 X-17 +1 17 standard NULL down
-18 X-18 +1 18 standard NULL up
-19 X-19 +1 19 standard NULL down
-20 X-20 +1 20 narrow NULL up
-21 X-21 +1 21 narrow NULL down
-22 X-22 +1 22 short -1 up
-23 X-23 +1 23 short -1 down
-24 X-24 +1 24 short +1 up
-25 X-25 +1 25 short +1 down
-26 X-26 +1 26 narrow NULL up
-27 X-27 +1 27 narrow NULL down
-28 X-28 +1 28 standard NULL up
-29 X-29 +1 29 standard NULL down
-30 X-30 +1 30 standard NULL up
-31 X-31 +1 31 standard NULL down
-32 X-32 +1 32 standard NULL up
-33 X-33 +1 33 standard NULL down
-34 X-34 +1 34 standard NULL up
-35 X-35 +1 35 standard NULL down
-36 X-36 +1 36 standard NULL up
-37 X-37 +1 37 standard NULL down
-38 X-38 +1 38 standard NULL up
-39 X-39 +1 39 standard NULL down
-40 X-40 +1 40 standard NULL up
-41 X-41 +1 41 standard NULL down
-42 X-42 +1 42 standard NULL up
-43 X-43 +1 43 standard NULL down
-44 X-44 +1 44 standard NULL up
-45 X-45 +1 45 standard NULL down
-46 X-46 +1 46 standard NULL up
-47 Y-1 -1 1 standard NULL down
-48 Y-2 -1 2 standard NULL up
-49 Y-3 -1 3 standard NULL down
-50 Y-4 -1 4 standard NULL up
-51 Y-5 -1 5 standard NULL down
-52 Y-6 -1 6 standard NULL up
-53 Y-7 -1 7 standard NULL down
-54 Y-8 -1 8 standard NULL up
-55 Y-9 -1 9 standard NULL down
-56 Y-10 -1 10 standard NULL up
-57 Y-11 -1 11 standard NULL down
-58 Y-12 -1 12 standard NULL up
-59 Y-13 -1 13 standard NULL down
-60 Y-14 -1 14 standard NULL up
-61 Y-15 -1 15 standard NULL down
-62 Y-16 -1 16 standard NULL up
-63 Y-17 -1 17 standard NULL down
-64 Y-18 -1 18 standard NULL up
-65 Y-19 -1 19 standard NULL down
-66 Y-20 -1 20 narrow NULL up
-67 Y-21 -1 21 narrow NULL down
-68 Y-22 -1 22 short +1 up
-69 Y-23 -1 23 short +1 down
-70 Y-24 -1 24 short -1 up
-71 Y-25 -1 25 short -1 down
-72 Y-26 -1 26 narrow NULL up
-73 Y-27 -1 27 narrow NULL down
-74 Y-28 -1 28 standard NULL up
-75 Y-29 -1 29 standard NULL down
-76 Y-30 -1 30 standard NULL up
-77 Y-31 -1 31 standard NULL down
-78 Y-32 -1 32 standard NULL up
-79 Y-33 -1 33 standard NULL down
-80 Y-34 -1 34 standard NULL up
-81 Y-35 -1 35 standard NULL down
-82 Y-36 -1 36 standard NULL up
-83 Y-37 -1 37 standard NULL down
-84 Y-38 -1 38 standard NULL up
-85 Y-39 -1 39 standard NULL down
-86 Y-40 -1 40 standard NULL up
-87 Y-41 -1 41 standard NULL down
-88 Y-42 -1 42 standard NULL up
-89 Y-43 -1 43 standard NULL down
-90 Y-44 -1 44 standard NULL up
-91 Y-45 -1 45 standard NULL down
-92 Y-46 -1 46 standard NULL up
+1 X-1 +1 standard NULL down
+2 X-2 +1 standard NULL up
+3 X-3 +1 standard NULL down
+4 X-4 +1 standard NULL up
+5 X-5 +1 standard NULL down
+6 X-6 +1 standard NULL up
+7 X-7 +1 standard NULL down
+8 X-8 +1 standard NULL up
+9 X-9 +1 standard NULL down
+10 X-10 +1 standard NULL up
+11 X-11 +1 standard NULL down
+12 X-12 +1 standard NULL up
+13 X-13 +1 standard NULL down
+14 X-14 +1 standard NULL up
+15 X-15 +1 standard NULL down
+16 X-16 +1 standard NULL up
+17 X-17 +1 standard NULL down
+18 X-18 +1 standard NULL up
+19 X-19 +1 standard NULL down
+20 X-20 +1 narrow NULL up
+21 X-21 +1 narrow NULL down
+22 X-22 +1 short -1 up
+23 X-23 +1 short -1 down
+24 X-24 +1 short +1 up
+25 X-25 +1 short +1 down
+26 X-26 +1 narrow NULL up
+27 X-27 +1 narrow NULL down
+28 X-28 +1 standard NULL up
+29 X-29 +1 standard NULL down
+30 X-30 +1 standard NULL up
+31 X-31 +1 standard NULL down
+32 X-32 +1 standard NULL up
+33 X-33 +1 standard NULL down
+34 X-34 +1 standard NULL up
+35 X-35 +1 standard NULL down
+36 X-36 +1 standard NULL up
+37 X-37 +1 standard NULL down
+38 X-38 +1 standard NULL up
+39 X-39 +1 standard NULL down
+40 X-40 +1 standard NULL up
+41 X-41 +1 standard NULL down
+42 X-42 +1 standard NULL up
+43 X-43 +1 standard NULL down
+44 X-44 +1 standard NULL up
+45 X-45 +1 standard NULL down
+46 X-46 +1 standard NULL up
+47 Y-1 -1 standard NULL down
+48 Y-2 -1 standard NULL up
+49 Y-3 -1 standard NULL down
+50 Y-4 -1 standard NULL up
+51 Y-5 -1 standard NULL down
+52 Y-6 -1 standard NULL up
+53 Y-7 -1 standard NULL down
+54 Y-8 -1 standard NULL up
+55 Y-9 -1 standard NULL down
+56 Y-10 -1 standard NULL up
+57 Y-11 -1 standard NULL down
+58 Y-12 -1 standard NULL up
+59 Y-13 -1 standard NULL down
+60 Y-14 -1 standard NULL up
+61 Y-15 -1 standard NULL down
+62 Y-16 -1 standard NULL up
+63 Y-17 -1 standard NULL down
+64 Y-18 -1 standard NULL up
+65 Y-19 -1 standard NULL down
+66 Y-20 -1 narrow NULL up
+67 Y-21 -1 narrow NULL down
+68 Y-22 -1 short +1 up
+69 Y-23 -1 short +1 down
+70 Y-24 -1 short -1 up
+71 Y-25 -1 short -1 down
+72 Y-26 -1 narrow NULL up
+73 Y-27 -1 narrow NULL down
+74 Y-28 -1 standard NULL up
+75 Y-29 -1 standard NULL down
+76 Y-30 -1 standard NULL up
+77 Y-31 -1 standard NULL down
+78 Y-32 -1 standard NULL up
+79 Y-33 -1 standard NULL down
+80 Y-34 -1 standard NULL up
+81 Y-35 -1 standard NULL down
+82 Y-36 -1 standard NULL up
+83 Y-37 -1 standard NULL down
+84 Y-38 -1 standard NULL up
+85 Y-39 -1 standard NULL down
+86 Y-40 -1 standard NULL up
+87 Y-41 -1 standard NULL down
+88 Y-42 -1 standard NULL up
+89 Y-43 -1 standard NULL down
+90 Y-44 -1 standard NULL up
+91 Y-45 -1 standard NULL down
+92 Y-46 -1 standard NULL up
