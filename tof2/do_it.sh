@@ -18,6 +18,6 @@ grep -v \# pmt_info.txt \
 awk '{print "INSERT INTO moduleLocation set", "id="$1",", "label=\""$2"\",", "layer="$3",", "moduleType=\""$4"\",", "end="$5",", "orientation=\""$6"\";"}' \
     < module_info.txt | mysql -utofuser TOFMap2
 grep -v \# pmt_info.txt | awk '{print "INSERT INTO pmtLocation SET id = "$1", moduleLocationId = (SELECT id FROM moduleLocation WHERE label = \""$6"\"), end = "$7", label = \""$5"\";"}' | mysql -utofuser TOFMap2
-awk '{print "INSERT INTO splitterLocation SET id = "$1", label = \""$2"\";"}' < splitter_info.txt | mysql -utofuser TOFMap2
-# assume pmtLocationId = splitterLocationId
-grep -v \# pmt_info.txt | awk '{print "INSERT INTO signalCable SET id="$1", label=\""$5"\", pmtLocationId="$1", splitterLocationId="$1";"}' | mysql -u tofuser TOFMap2
+grep -v \# pmt_info.txt | awk '{print "INSERT INTO signalCable SET id="$1", label=\""$5"\", pmtLocationId="$1";"}' | mysql -u tofuser TOFMap2
+awk '{print "INSERT INTO splitterLocation SET id = "$1", label = \""$2"\";"}' < splitter_location_info.txt | mysql -utofuser TOFMap2
+awk '{print "UPDATE signalCable SET splitterLocationId = "$1" WHERE label = \""$3"\";"}' < splitter_location_info.txt | mysql -utofuser TOFMap2
