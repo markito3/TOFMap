@@ -2,13 +2,13 @@
 -- adcLocation table
 --
 -- id: identifier
--- crateId: crate ID
+-- crateLocationId: crate ID
 -- slot: slot number
 --
 
 create table adcLocation (
   id smallint not null,
-  crateId smallint not null,
+  crateLocationId smallint not null,
   slot smallint not null,
   primary key (id)
 );
