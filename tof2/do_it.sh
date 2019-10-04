@@ -15,6 +15,9 @@ cat \
     ../sql/adc_cable.sql \
     ../sql/adc_location.sql \
     ../sql/adc.sql \
+    ../sql/hv_card.sql \
+    ../sql/hv_card_location.sql \
+    ../sql/hv_cable.sql \
     | mysql -utofuser TOFMap2
 echo === Enter data into pmt table ===
 grep -v \# pmt_info.txt \
