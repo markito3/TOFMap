@@ -13,5 +13,6 @@ create table hvCable (
   label varchar(128),
   pmtLocationId smallint,
   hvCardLocationId smallint,
+  channel smallint,
   primary key (id)
 );

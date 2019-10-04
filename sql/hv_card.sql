@@ -7,6 +7,6 @@
 
 create table hvCard (
   serialNo varchar(32) not null,
-  adcLocationId smallint,
+  hvCardLocationId smallint,
   primary key (serialNo)
 );
