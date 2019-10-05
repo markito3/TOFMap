@@ -18,8 +18,14 @@ cat \
     ../sql/hv_card.sql \
     ../sql/hv_card_location.sql \
     ../sql/hv_cable.sql \
+    ../sql/disc.sql \
+    ../sql/disc_location.sql \
+    ../sql/disc_cable.sql \
+    ../sql/tdc.sql \
+    ../sql/tdc_location.sql \
+    ../sql/tdc_cable.sql \
     | mysql -utofuser TOFMap2
-echo === Enter data into pmt table ===
+echo === Crate PMTs ===
 grep -v \# pmt_info.txt \
     | awk '{print "INSERT INTO pmt set serialNo = \""$2"\", type = \""$3"\", pmtLocationId = "$1";"}' \
     | mysql -utofuser TOFMap2
@@ -47,3 +53,7 @@ echo === Connect ADC cables to ADCs ===
 grep " TOF-" adc_csc.tmp | awk '{print "UPDATE adcCable set adcLocationId = (SELECT id FROM adcLocation where crateLocationId = "$1" and slot = "$2"), channel = "$3" WHERE label = \""$4"\";"}' | mysql -utofuser TOFMap2
 echo === Add HV cards and cables ===
 hv.py < hv.csv | mysql -utofuser TOFMap2
+echo === Add discriminators and their cables ===
+disc.py < disc.csv | mysql -utofuser TOFMap2
+echo === Add tdcs and their cables ===
+tdc.py < tdc.csv | mysql -utofuser TOFMap2

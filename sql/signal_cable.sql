@@ -9,8 +9,8 @@
 
 create table signalCable (
   id smallint not null,
-  label varchar(128) not null,
-  pmtLocationId smallint not null,
-  splitterLocationId smallint not null,
+  label varchar(128),
+  pmtLocationId smallint,
+  splitterLocationId smallint,
   primary key (id)
 );
