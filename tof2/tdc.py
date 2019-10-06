@@ -21,6 +21,7 @@ for line in sys.stdin:
         half = cables[1]
         for j in range(1, nslots + 1):
             label = cables[j]
+            slot = slots[j]
             if label[0:4] == 'TOF-':
                 cable_id = cable_id + 1
-                print("INSERT INTO tdcCable SET id = " + str(cable_id) + ", label = \"" + label + "\", tdcLocationId = (SELECT id from tdcLocation, WHERE discCable.label = label), tdcHalf = \"" + half + "\", tdcChannel = " + channel + ", discLocationId = (SELECT discLocation.id FROM discLocation, discCable WHERE discCable.discLocationId = discLocation.id AND discCable.label = \"" + label + "\");")
+                print("INSERT INTO tdcCable SET id = " + str(cable_id) + ", label = \"" + label + "\", tdcLocationId = (SELECT id from tdcLocation WHERE crateLocationId = 4 AND slot = \"" + slot + "\"), tdcHalf = \"" + half + "\", tdcChannel = " + channel + ", discLocationId = (SELECT discLocation.id FROM discLocation, discCable WHERE discCable.discLocationId = discLocation.id AND discCable.label = \"" + label + "\");")
