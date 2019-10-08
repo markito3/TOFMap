@@ -10,7 +10,7 @@ for line in sys.stdin:
         slots = liner.split(',')
         nslots = len(slots) - 1
         for j in range(1, nslots + 1):
-            print("INSERT INTO hvCardLocation SET id = " + str(j) + ", slot = " + slots[j] + ";")
+            print("INSERT INTO hvCardLocation SET id = " + str(j) + ", crateLocationId = 2, slot = " + slots[j] + ";")
     elif i == 2:
         serialNos = liner.split(',')
         for j in range(1, nslots + 1):
