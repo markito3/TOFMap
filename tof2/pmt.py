@@ -6,7 +6,7 @@ for line in sys.stdin:
     liner = line.rstrip()
     fields = liner.split()
     nfields = len(fields)
-    print(i, fields)
+#    print(i, fields)
     id = int(fields[0])
     label = fields[4]
     end = int(fields[6])
