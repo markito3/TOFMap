@@ -9,8 +9,9 @@
 
 create table pmtLocation (
   id smallint not null,
-  moduleLocationId smallint default 0 not null,
-  end smallint not null,
-  label varchar(128) not null,
+  moduleLocationId smallint,
+  end smallint,
+  label varchar(128),
+  labelPhysics char(4),
   primary key (id)
 );

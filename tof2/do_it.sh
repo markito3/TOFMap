@@ -25,7 +25,7 @@ cat \
     ../sql/tdc_location.sql \
     ../sql/tdc_cable.sql \
     | mysql -utofuser TOFMap2
-echo === Crate PMTs ===
+echo === Create PMTs ===
 grep -v \# pmt_info.txt \
     | awk '{print "INSERT INTO pmt set serialNo = \""$2"\", type = \""$3"\", pmtLocationId = "$1";"}' \
     | mysql -utofuser TOFMap2
@@ -33,7 +33,7 @@ echo === Enter data into moduleLocation table ===
 awk '{print "INSERT INTO moduleLocation set", "id="$1",", "label=\""$2"\",", "layer="$3",", "moduleType=\""$4"\",", "end="$5",", "orientation=\""$6"\";"}' \
     < module_info.txt | mysql -utofuser TOFMap2
 echo === Enter data into pmtLocation table ===
-grep -v \# pmt_info.txt | awk '{print "INSERT INTO pmtLocation SET id = "$1", moduleLocationId = (SELECT id FROM moduleLocation WHERE label = \""$6"\"), end = "$7", label = \""$5"\";"}' | mysql -utofuser TOFMap2
+grep -v \# pmt_info.txt | awk '{print "INSERT INTO pmtLocation SET id = "$1", moduleLocationId = (SELECT id FROM moduleLocation WHERE label = \""$6"\"), end = "$7", label = \""$5"\", labelPhysics = \""$8"\";"}' | mysql -utofuser TOFMap2
 echo === Enter data into signalCable table ===
 grep -v \# pmt_info.txt | awk '{print "INSERT INTO signalCable SET id="$1", label=\""$5"\", pmtLocationId="$1";"}' | mysql -u tofuser TOFMap2
 echo === Enter data into splitterLocation table ===
