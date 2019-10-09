@@ -1,0 +1,1 @@
+select crateLocationId, slot, channel, pmtLocation.label, labelPhysics from adcCable, adcLocation, splitterLocation, signalCable, pmtLocation where adcLocationId = adcLocation.id and adcCable.splitterLocationId = splitterLocation.id and signalCable.splitterLocationId = adcCable.splitterLocationId and pmtLocationId = pmtLocation.id order by crateLocationId, slot, channel;
