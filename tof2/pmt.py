@@ -20,10 +20,10 @@ for line in sys.stdin:
         index = i
     elif edge == 'UP':
         orientation = 'V'
-        index = 47 - i
+        index = i
     elif edge == 'DW':
         orientation = 'V'
-        index = i
+        index = 47 - i
     else:
         print('error')
         exit
@@ -34,6 +34,6 @@ for line in sys.stdin:
     else:
         print('error')
         exit
-    print(fields[0] + ' ' + fields[1] + ' ' + fields[2] + ' ' + fields[3] + ' ' + fields[4] + ' ' + fields[5] + ' ' + fields[6] + ' ' + orientation + '%02d' % index + endchar)
+    print('UPDATE pmtLocation set labelPhysics = \"'  + orientation + '%02d' % index + endchar + '\" WHERE id = ' + fields[0] + ';')
     if i == 46:
         i = 0
