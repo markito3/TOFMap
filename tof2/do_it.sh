@@ -47,12 +47,7 @@ awk '{print "INSERT INTO adcCable SET id = "$1", label = \""$2"\";"}' < adc_cabl
 echo === Connect ADC cables to splitters ===
 awk '{print $3}' < splitter_location_info.txt | awk -F"-" '{print $1"-"$2"-"$3, $1"-"$2"-A-"$3}' | awk '{print "UPDATE adcCable SET splitterLocationId = (SELECT splitterLocation.id FROM splitterLocation, signalCable WHERE splitterLocation.id = splitterLocationId AND signalCable.label = \""$1"\") WHERE label = \""$2"\";"}' | mysql -u tofuser TOFMap2
 echo === Enter data into adcLocation table ===
-grep -v \# adc.txt | awk '{print "INSERT INTO adcLocation SET id = "$1", crateLocationId = "$2", slot = "$3"; INSERT INTO adc SET serialNo = \""$4"\", adcLocationId = "$1";"}' | mysql -utofuser TOFMap2
-echo === Create ADC crate/slot/channel data ===
-rm -f adc_csc.tmp
-grep -v Slot adcs.csv | awk -F"," '{print "1 3 "$1, $2"\n1 4 "$1, $3"\n1 5 "$1, $4"\n1 6 "$1, $5"\n1 7 "$1, $6"\n1 8 "$1, $7"\n1 9 "$1, $8"\n1 10 "$1, $9"\n1 13 "$1, $10"\n1 14 "$1, $11"\n1 15 "$1, $12"\n1 16 "$1, $13}' > adc_csc.tmp
-echo === Connect ADC cables to ADCs ===
-grep " TOF-" adc_csc.tmp | awk '{print "UPDATE adcCable set adcLocationId = (SELECT id FROM adcLocation where crateLocationId = "$1" and slot = "$2"), channel = "$3" WHERE label = \""$4"\";"}' | mysql -utofuser TOFMap2
+adc.py < adc.csv | mysql -utofuser TOFMap2
 echo === Add HV cards and cables ===
 hv.py < hv.csv | mysql -utofuser TOFMap2
 echo === Add discriminators and their cables ===
