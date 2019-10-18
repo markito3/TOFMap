@@ -24,6 +24,8 @@ cat \
     ../sql/tdc.sql \
     ../sql/tdc_location.sql \
     ../sql/tdc_cable.sql \
+    ../sql/crate.sql \
+    ../sql/crate_location.sql \
     | mysql -utofuser TOFMap2
 echo === Create PMTs ===
 grep -v \# pmt_info.txt \
@@ -54,3 +56,5 @@ echo === Add discriminators and their cables ===
 disc.py < disc.csv | mysql -utofuser TOFMap2
 echo === Add tdcs and their cables ===
 tdc.py < tdc.csv | mysql -utofuser TOFMap2
+echo === Add crates ===
+grep -v \# crate_info.txt | awk -F',' '{print "INSERT INTO crate SET serialNo = \""$3"\", type = \""$2"\", crateLocationId = "$1"; INSERT INTO crateLocation SET id = "$1", cratePositionLabel = \""$4"\";"}'

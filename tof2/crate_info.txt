@@ -1,0 +1,5 @@
+# id, type, serialNo, cratePositionLabel,comment
+1,VXS,1188025,D2-1-TOP,adc
+2,CAENHV,500,D2-8-TOP,hv
+3,VME,788005,D2-1-BOT,disc
+4,VXS,1688033,D2-1-MID,tdc
