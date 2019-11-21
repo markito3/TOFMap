@@ -32,7 +32,7 @@ grep -v \# pmt_info.txt \
     | awk '{print "INSERT INTO pmt set serialNo = \""$2"\", type = \""$3"\", pmtLocationId = "$1";"}' \
     | mysql -utofuser TOFMap2
 echo === Enter data into moduleLocation table ===
-awk '{print "INSERT INTO moduleLocation set", "id="$1",", "label=\""$2"\",", "layer="$3",", "moduleType=\""$4"\",", "end="$5",", "orientation=\""$6"\";"}' \
+awk '{print "INSERT INTO moduleLocation set", "id="$1",", "label=\""$2"\",", "layer="$3",", "moduleType=\""$4"\",", "end="$5",", "orientation=\""$6"\", bar="$7";"}' \
     < module_info.txt | mysql -utofuser TOFMap2
 echo === Enter data into pmtLocation table ===
 grep -v \# pmt_info.txt | awk '{print "INSERT INTO pmtLocation SET id = "$1", moduleLocationId = (SELECT id FROM moduleLocation WHERE label = \""$6"\"), end = "$7", label = \""$5"\";"}' | mysql -utofuser TOFMap2
@@ -57,4 +57,4 @@ disc.py < disc.csv | mysql -utofuser TOFMap2
 echo === Add tdcs and their cables ===
 tdc.py < tdc.csv | mysql -utofuser TOFMap2
 echo === Add crates ===
-grep -v \# crate_info.txt | awk -F',' '{print "INSERT INTO crate SET serialNo = \""$3"\", type = \""$2"\", crateLocationId = "$1"; INSERT INTO crateLocation SET id = "$1", cratePositionLabel = \""$4"\";"}'
+grep -v \# crate_info.txt | awk -F',' '{print "INSERT INTO crate SET serialNo = \""$3"\", type = \""$2"\", crateLocationId = "$1"; INSERT INTO crateLocation SET id = "$1", cratePositionLabel = \""$4"\";"}' | mysql -u tofuser TOFMap2
