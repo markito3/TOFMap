@@ -95,9 +95,10 @@ for x in myresult:
   discLabel = str(x[2])
   if bar == '23' or bar == '24':
     print('here comes trouble')
+# add the adc channel
     cur.execute("SELECT MAX(chanid) FROM Channel")
     row = cur.fetchone()
-    chanid = row[0]+1
+    chanid = row[0] + 1
     adcslot = str(x[11])
     adcModQuery = "SELECT moduleid FROM Module, Crate WHERE Crate.name = \"D2-1-TOP\" and slot = " + adcslot + " and Module.crateid = Crate.crateid;"
     print(adcModQuery)
@@ -106,6 +107,36 @@ for x in myresult:
     adc_moduleid = str(row[0])
     channel = str(x[9])
     insertQuery = "INSERT INTO Channel (chanid, moduleid, name, channel, system,col_name, enable) VALUES (" + str(chanid) + ", " + adc_moduleid + ", \"" + adcLabel + "\", " + channel + ", \"TOF\", \"adc_chanid\", 1)"
+    print(insertQuery)
+    cur.execute(insertQuery)
+    con.commit()
+# add the tdc channel
+    cur.execute("SELECT MAX(chanid) FROM Channel")
+    row = cur.fetchone()
+    chanid = row[0] + 1
+    tdcslot = str(x[21])
+    tdcModQuery = "SELECT moduleid FROM Module, Crate WHERE Crate.name = \"D2-1-MID\" and slot = " + tdcslot + " and Module.crateid = Crate.crateid;"
+    print(tdcModQuery)
+    cur.execute(tdcModQuery)
+    row = cur.fetchone()
+    tdc_moduleid = str(row[0])
+    channel = str(x[19])
+    insertQuery = "INSERT INTO Channel (chanid, moduleid, name, channel, system,col_name, enable) VALUES (" + str(chanid) + ", " + tdc_moduleid + ", \"" + tdcLabel + "\", " + channel + ", \"TOF\", \"tdc_chanid\", 1)"
+    print(insertQuery)
+    cur.execute(insertQuery)
+    con.commit()
+# add the discriminator channel
+    cur.execute("SELECT MAX(chanid) FROM Channel")
+    row = cur.fetchone()
+    chanid = row[0] + 1
+    discslot = str(x[15])
+    discModQuery = "SELECT moduleid FROM Module, Crate WHERE Crate.name = \"D2-1-BOT\" and slot = " + discslot + " and Module.crateid = Crate.crateid;"
+    print(discModQuery)
+    cur.execute(discModQuery)
+    row = cur.fetchone()
+    disc_moduleid = str(row[0])
+    channel = str(x[13])
+    insertQuery = "INSERT INTO Channel (chanid, moduleid, name, channel, system,col_name, enable) VALUES (" + str(chanid) + ", " + disc_moduleid + ", \"" + discLabel + "\", " + channel + ", \"TOF\", \"disc_chanid\", 1)"
     print(insertQuery)
     cur.execute(insertQuery)
     con.commit()
