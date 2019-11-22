@@ -30,6 +30,15 @@ adcModuleInsertQuery = "INSERT INTO Module VALUES (" + new_moduleid + ", 61, 16,
 print(adcModuleInsertQuery)
 cur.execute(adcModuleInsertQuery)
 con.commit()
+# insert new discriminator module
+cur.execute("SELECT max(moduleid) FROM Module;")
+row = cur.fetchone()
+new_moduleid = str(row[0] + 1)
+# use hardwired crate id and slot number
+discModuleInsertQuery = "INSERT INTO Module VALUES (" + new_moduleid + ", 63, 15, \"DISC\", \"ACDI-071\");"
+print(discModuleInsertQuery)
+cur.execute(discModuleInsertQuery)
+con.commit()
 
 cur.execute("DROP TABLE IF EXISTS TOF2;")
 createQuery = "CREATE TABLE TOF2(plane INT, bar INT, end TEXT, adc_chanid INTEGER, tdc_chanid INTEGER, disc_chanid INTEGER);"
