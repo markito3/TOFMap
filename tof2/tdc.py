@@ -24,4 +24,5 @@ for line in sys.stdin:
             slot = slots[j + 2 - 1]
             if label[0:4] == 'TOF-':
                 cable_id = cable_id + 1
-                print("INSERT INTO tdcCable SET id = " + str(cable_id) + ", label = \"" + label + "\", tdcLocationId = (SELECT id from tdcLocation WHERE crateLocationId = 4 AND slot = \"" + slot + "\"), tdcHalf = \"" + half + "\", tdcChannel = " + channel + ", discLocationId = (SELECT discLocation.id FROM discLocation, discCable WHERE discCable.discLocationId = discLocation.id AND discCable.label = \"" + label + "\");")
+                print("INSERT INTO tdcCable SET id = " + str(cable_id) + ", label = \"" + label + "\", tdcLocationId = (SELECT id from tdcLocation WHERE crateLocationId = 4 AND slot = \"" + slot + "\"), tdcHalf = \"" + half + "\", tdcChannel = " + channel + ", discLocationId = (SELECT discLocation.id FROM discLocation, discCable WHERE discCable.discLocationId = discLocation.id AND discCable.label = \"" + label + "\"), discChannel = (SELECT discCable.channel FROM discLocation, discCable WHERE discCable.discLocationId = discLocation.id AND discCable.label = \"" + label + "\");")
+
